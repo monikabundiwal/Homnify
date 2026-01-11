@@ -1,0 +1,104 @@
+<p>basic-details works!</p>
+
+<div class="section">
+  <div class="panel">
+    <div class="panel-title">When Do You Need the Chef?</div>
+
+    <div class="option-block">
+      <label class="radio">
+        <input type="radio" name="mode" checked />
+        <span>Quick options</span>
+      </label>
+
+      <div class="radio-row">
+        <label class="radio small">
+          <input type="radio" [value]="'now_15_30'" formControlName="mealSlot" />
+          <span>Now (15–30 min)</span>
+        </label>
+        <label class="radio small">
+          <input type="radio" [value]="'today_lunch'" formControlName="mealSlot" />
+          <span>Today Lunch</span>
+        </label>
+        <label class="radio small">
+          <input type="radio" [value]="'today_dinner'" formControlName="mealSlot" />
+          <span>Today Dinner</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="option-block">
+      <label class="radio">
+        <input type="radio" name="mode" />
+        <span>Schedule</span>
+      </label>
+
+      <div class="radio-row">
+        <label class="radio small">
+          <input type="radio" [value]="'tomorrow_morning'" formControlName="mealSlot" />
+          <span>Tomorrow Morning</span>
+        </label>
+        <label class="radio small">
+          <input type="radio" [value]="'tomorrow_lunch'" formControlName="mealSlot" />
+          <span>Tomorrow Lunch</span>
+        </label>
+        <label class="radio small">
+          <input type="radio" [value]="'tomorrow_dinner'" formControlName="mealSlot" />
+          <span>Tomorrow Dinner</span>
+        </label>
+        <label class="radio small">
+          <input type="radio" [value]="'custom'" formControlName="mealSlot" />
+          <span>Custom</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="panel-title">Number of Family Members</div>
+
+      <label class="radio line">
+        <input type="radio" [value]="'1-2'" formControlName="familySize" />
+        <span>1 - 2</span>
+      </label>
+      <label class="radio line">
+        <input type="radio" [value]="'3-4'" formControlName="familySize" />
+        <span>3 - 4</span>
+      </label>
+      <label class="radio line">
+        <input type="radio" [value]="'5-6'" formControlName="familySize" />
+        <span>5 - 6</span>
+      </label>
+      <label class="radio line">
+        <input type="radio" [value]="'7+'" formControlName="familySize" />
+        <span>7+</span>
+      </label>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Meal Timings Needed</div>
+
+      <label class="check">
+        <input type="checkbox" formControlName="breakfast" />
+        <span>Breakfast</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" formControlName="lunch" />
+        <span>Lunch</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" formControlName="dinner" />
+        <span>Dinner</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" formControlName="all" />
+        <span>All</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="nav">
+<button class="btn ghost" type="button">‹ BACK</button>
+    <button class="btn primary" type="button" (click)="goNext()">NEXT ›</button>
+  </div>
+</div>

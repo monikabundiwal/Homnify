@@ -1,0 +1,24 @@
+.wrap{ padding:10px; }
+h2{ margin:0 0 6px; color:#111827; }
+.sub{ margin:0 0 14px; color:#667085; }
+
+.panel{
+  border:1px solid #eef2f7;
+  border-radius:12px;
+  padding:14px;
+}
+
+.row{ display:flex; flex-direction:column; gap:8px; margin-bottom:14px; }
+label{ font-weight:800; color:#344054; }
+
+input, select, textarea{
+  border:1px solid #e6edf5;
+  border-radius:10px;
+  padding:10px 12px;
+  font:inherit;
+}
+
+.nav{ display:flex; justify-content:flex-end; gap:14px; margin-top:18px; }
+.btn{ border-radius:10px; padding:10px 16px; font-weight:800; cursor:pointer; border:1px solid transparent; }
+.btn.ghost{ background:#fff; border-color:#e6edf5; color:#667085; }
+.btn.primary{ background:#11b3b5; border-color:#11b3b5; color:#fff; }

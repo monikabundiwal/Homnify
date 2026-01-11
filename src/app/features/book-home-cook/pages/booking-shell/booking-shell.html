@@ -1,0 +1,76 @@
+<p>booking-shell works!</p>
+
+<div class="page">
+  <header class="top">
+    <h1 class="title">Book a Home Cook</h1>
+
+    <div class="stepper">
+      <div class="step" *ngFor="let s of steps; let i = index">
+        <div class="bubble"
+             [class.active]="isActive(s.key)"
+             [class.done]="isDone(s.key)">
+          <span class="icon">{{ s.icon }}</span>
+        </div>
+
+        <div class="labels">
+          <div class="step-title">{{ s.title }}</div>
+          <div class="step-sub">{{ s.subtitle }}</div>
+        </div>
+
+        <div class="line" *ngIf="i < steps.length - 1"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="left">
+      <router-outlet></router-outlet>
+    </section>
+
+    <aside class="right">
+      <div class="card cart">
+        <div class="card-title">Cart</div>
+
+        <div class="cart-item">
+          <div class="chip">🍳</div>
+          <div class="cart-item-main">
+            <div class="cart-item-name">COOKING</div>
+          </div>
+          <button class="icon-btn" type="button" aria-label="remove">
+            🗑️
+          </button>
+        </div>
+
+        <div class="cart-meta">
+          <div class="meta-row">
+            <span class="meta-ico">✉️</span>
+            <span>Today Lunch</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-ico">✉️</span>
+            <span>3 - 4 Members</span>
+          </div>
+        </div>
+
+        <div class="pricing">
+          <div class="pricing-title">Cart Pricing</div>
+          <div class="pricing-box">
+            <div class="p-row">
+              <span>Base Charge</span>
+              <span>₹{{ booking.snapshot.pricing.base }}</span>
+            </div>
+            <div class="p-row">
+              <span>Tax and fees</span>
+              <span>₹{{ booking.snapshot.pricing.tax }}</span>
+            </div>
+          </div>
+
+          <div class="cta">
+            <div class="total">Total: ₹{{ booking.total }}</div>
+            <button class="continue" type="button">CONTINUE</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>

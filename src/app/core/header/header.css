@@ -1,0 +1,50 @@
+/* Sticky Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;               /* FULL WIDTH */
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 48px;
+  background: radial-gradient(circle at top left, #000, #000);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #3df1c6;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3df1c6;
+}
+
+/* Icons */
+.active {
+  font-weight: bold;
+  color: #1976d2;
+}

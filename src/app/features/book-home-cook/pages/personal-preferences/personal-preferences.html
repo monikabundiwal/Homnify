@@ -1,0 +1,31 @@
+<p>personal-preferences works!</p>
+<div class="wrap">
+  <h2>Personal Preferences</h2>
+  <p class="sub">Add spice level, allergies and any notes for the chef.</p>
+
+  <div class="panel">
+    <div class="row">
+      <label>Spice level</label>
+      <select [formControl]="form.controls.spiceLevel">
+        <option value="mild">Mild</option>
+        <option value="medium">Medium</option>
+        <option value="hot">Hot</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Allergies</label>
+      <input type="text" placeholder="e.g., peanuts, lactose" [formControl]="form.controls.allergies" />
+    </div>
+
+    <div class="row">
+      <label>Notes</label>
+      <textarea rows="5" placeholder="Anything the chef should know?" [formControl]="form.controls.notes"></textarea>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button class="btn ghost" type="button" (click)="back()">‹ BACK</button>
+    <button class="btn primary" type="button" (click)="finish()">FINISH</button>
+  </div>
+</div>

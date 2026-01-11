@@ -1,0 +1,53 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px 14px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  width: min(980px, 92vw);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.divider {
+  width: 1px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #0b3b3e;
+  color: #fff;
+  font-size: 18px;
+}
